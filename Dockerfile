@@ -15,4 +15,4 @@ RUN wget https://files.dynatrace.com/downloads/OnPrem/dynaTrace/6.5/6.5.0.1289/d
 ADD docker_entrypoint.sh /
 RUN chmod +x docker_entrypoint.sh
 
-CMD "/docker_entrypoint.sh"
+ENTRYPOINT "/docker_entrypoint.sh"
