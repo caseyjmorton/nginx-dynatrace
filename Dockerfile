@@ -1,7 +1,7 @@
-FROM caseyjmorton/nginx-debug-symbols
+FROM nginx:1.10.3
 
 RUN apt-get update && \
-	apt-get -y install wget procps file gdb elfutils binutils bc locales
+	apt-get -y install wget procps file gdb elfutils binutils bc locales nginx-dbg=1.10.3-1~jessie
 
 # Download and install dynatrace
 RUN wget https://files.dynatrace.com/downloads/OnPrem/dynaTrace/6.5/6.5.0.1289/dynatrace-wsagent-6.5.0.1289-linux-x86-64.tar -P /tmp && \
